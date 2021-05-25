@@ -1,5 +1,6 @@
 <template>
   <Header />
+  <div>compact-------------</div>
   <router-view></router-view>
 </template>
 
@@ -12,7 +13,7 @@ export default defineComponent({
     Header
   },
   setup() {
-    console.log('layout default')
+    console.log('layout compact')
   }
 })
 </script>

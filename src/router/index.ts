@@ -1,18 +1,29 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import Home from '../views/Home.vue'
 import LayoutDefault from '../layouts/LayoutDefault.vue'
+import LayoutCompact from '../layouts/LayoutCompact.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'home',
+    component: () => import('../views/Home.vue'),
+    meta: {
+      layout: LayoutDefault
+    }
   },
   {
-    path: '/about',
-    name: 'About',
-    component: () => import('../views/About.vue')
-  }
+    path: '/todo',
+    name: 'todo',
+    component: () => import('../views/Todo.vue'),
+    meta: {
+      layout: LayoutCompact
+    }
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'PageNotFound',
+    component: () => import('../views/PageNotFound.vue'),
+  },
 ]
 
 const router = createRouter({
