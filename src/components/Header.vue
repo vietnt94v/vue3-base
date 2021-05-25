@@ -1,7 +1,11 @@
 <template>
-  <header class="p-2">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/todo">Todo</router-link>
+  <header class="sticky top-0 shadow-md">
+    <div class="container">
+      <div class="py-3">
+        <router-link to="/" class="text-success">Home</router-link> |
+        <router-link to="/todo" class="text-success">Todo</router-link>
+      </div>
+    </div>
   </header>
 </template>
 

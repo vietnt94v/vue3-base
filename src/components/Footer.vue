@@ -1,16 +1,17 @@
 <template>
-  <div class="home">
+  <footer class="bg-secondary">
     <div class="container">
-      This is home page
+      <div class="text-center py-2">
+        Copyright &copy; vietnt. All rights reserved.
+      </div>
     </div>
-  </div>
+  </footer>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'Home',
-  components: {}
+  setup() {}
 })
 </script>

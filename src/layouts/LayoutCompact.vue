@@ -1,7 +1,10 @@
 <template>
-  <Header />
-  <div>compact-------------</div>
-  <router-view></router-view>
+  <div class="h-screen flex flex-col">
+    <Header />
+    <main class="flex-grow">
+      <router-view></router-view>
+    </main>
+  </div>
 </template>
 
 <script lang="ts">
@@ -12,8 +15,6 @@ export default defineComponent({
   components: {
     Header
   },
-  setup() {
-    console.log('layout compact')
-  }
+  setup() {}
 })
 </script>
