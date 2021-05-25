@@ -1,0 +1,3 @@
+input {
+  @apply border border-secondary rounded w-full px-3 py-2 transition duration-200;
+}

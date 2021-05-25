@@ -3,3 +3,6 @@
 @tailwind utilities;
 
 @import url('./_variable.css');
+
+@import url('./_input.css');
+@import url('./_button.css');

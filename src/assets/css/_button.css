@@ -1,0 +1,27 @@
+.btn {
+  @apply px-4 py-2 rounded border whitespace-nowrap cursor-pointer transition duration-200 focus:outline-none disabled:opacity-50;
+}
+
+.btn-primary {
+  @apply bg-primary text-light border-primary hover:bg-primary-dark hover:border-primary-dark;
+}
+
+.btn-secondary {
+  @apply bg-secondary text-light border-secondary hover:bg-secondary-dark hover:border-secondary-dark;
+}
+
+.btn-info {
+  @apply bg-info text-light border-info hover:bg-info-dark hover:border-info-dark;
+}
+
+.btn-success {
+  @apply bg-success text-light border-success hover:bg-success-dark hover:border-success-dark;
+}
+
+.btn-warning {
+  @apply bg-warning text-light border-warning hover:bg-warning-dark hover:border-warning-dark;
+}
+
+.btn-danger {
+  @apply bg-danger text-light border-danger hover:bg-danger-dark hover:border-danger-dark;
+}
