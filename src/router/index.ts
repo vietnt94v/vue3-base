@@ -16,7 +16,7 @@ const routes: Array<RouteRecordRaw> = [
     name: 'todo',
     component: () => import('../views/Todo.vue'),
     meta: {
-      layout: LayoutCompact
+      layout: LayoutDefault
     }
   },
   {
