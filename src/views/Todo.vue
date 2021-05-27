@@ -1,13 +1,15 @@
 <template>
-  <div class="todo">
-    This is todo page
-    {{ count }}
-    <button @click="increment" class="btn">+</button>
+  <div class="todo py-3">
+    <div class="container">
+      This is todo page
+      {{ count }}
+      <button @click="increment" class="btn">+</button>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue'
+import { computed, defineComponent, ref } from 'vue'
 import { useStore } from 'vuex'
 
 export default defineComponent({
@@ -15,10 +17,10 @@ export default defineComponent({
   components: {},
   setup() {
     const store = useStore()
-    const count = ref()
+    const count = ref(store.state.todo.count)
     const increment = () => {
-      store.commit('increment')
-      count.value = store.state.todo.count++
+      store.dispatch('increment')
+      count.value = store.state.todo.count
     }
 
     return {
