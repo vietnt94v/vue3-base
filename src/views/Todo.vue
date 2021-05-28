@@ -17,15 +17,10 @@ export default defineComponent({
   components: {},
   setup() {
     const store = useStore()
-    const count = ref(store.state.todo.count)
-    const increment = () => {
-      store.dispatch('increment')
-      count.value = store.state.todo.count
-    }
 
     return {
-      count,
-      increment
+      count: computed(() => store.state.todo.count),
+      increment: () => store.dispatch('increment')
     }
   }
 })

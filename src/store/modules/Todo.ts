@@ -22,6 +22,11 @@ const Todo = {
     increment(context: any) {
       context.commit('increment')
     }
+  },
+  getters: {
+    doubleCount(state: any) {
+      return state.count * 2
+    }
   }
 }
 
