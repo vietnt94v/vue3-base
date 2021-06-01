@@ -1,21 +1,25 @@
-// export interface State {
-//   count: number,
-//   todos: Array<Todo>
-// }
+import { createStore } from 'vuex'
 
-// export interface Todo {
-//   name: String,
-//   completed: Boolean
-// }
+export interface State {
+  todos: Array<Todo>,
+}
 
-const Todo = {
+export interface Todo {
+  id: number,
+  text: string,
+  completed: boolean
+}
+
+const Todo = createStore<State>({
   state: () => ({
-    count: 0,
-    todos: []
+    todos: [
+      { id: 1, text: 'Vuex', completed: true },
+      { id: 2, text: 'Typescript', completed: false }
+    ]
   }),
   mutations: {
-    increment(state: any) {
-      state.count++
+    increment() {
+      console.log('mutation');
     }
   },
   actions: {
@@ -23,11 +27,7 @@ const Todo = {
       context.commit('increment')
     }
   },
-  getters: {
-    doubleCount(state: any) {
-      return state.count * 2
-    }
-  }
-}
+  getters: {}
+})
 
 export default Todo

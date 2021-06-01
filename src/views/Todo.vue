@@ -2,7 +2,6 @@
   <div class="todo py-3">
     <div class="container">
       This is todo page
-      {{ count }}
       <button @click="increment" class="btn">+</button>
     </div>
   </div>
@@ -19,8 +18,7 @@ export default defineComponent({
     const store = useStore()
 
     return {
-      count: computed(() => store.state.todo.count),
-      increment: () => store.dispatch('increment')
+      increment: () => store.commit('increment')
     }
   }
 })
